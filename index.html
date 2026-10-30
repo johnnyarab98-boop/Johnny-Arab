@@ -912,9 +912,11 @@ footer {
     <h2>Until the next page.</h2>
     <p>For reader messages, book-related inquiries, interviews, or collaborations, get in touch.</p>
   </div>
-  <form class="contact-form" name="contact" method="POST" action="/?sent=1" data-netlify="true" netlify-honeypot="bot-field">
-    <input type="hidden" name="form-name" value="contact">
-    <p class="hidden-field"><label>Don't fill this out: <input name="bot-field"></label></p>
+  <form class="contact-form" id="contactForm" method="POST" action="https://api.web3forms.com/submit">
+    <input type="hidden" name="access_key" value="e519f668-1412-45cf-982d-95943e55c133">
+    <input type="hidden" name="subject" value="New message from the Johnny Arab website">
+    <input type="hidden" name="from_name" value="Johnny Arab Website">
+    <input type="checkbox" name="botcheck" class="hidden-field" tabindex="-1" autocomplete="off">
     <label for="cf-name">Your name</label>
     <input id="cf-name" type="text" name="name" required autocomplete="name">
     <label for="cf-email">Your email</label>
@@ -956,10 +958,31 @@ footer {
 
 <script>
 document.getElementById('year').textContent = new Date().getFullYear();
-if (new URLSearchParams(location.search).get('sent') === '1') {
-  document.getElementById('formStatus').textContent = 'Thank you — your message has been sent.';
-  document.getElementById('contact').scrollIntoView();
-}
+document.getElementById('contactForm').addEventListener('submit', async function (e) {
+  e.preventDefault();
+  const form = e.target;
+  const status = document.getElementById('formStatus');
+  const btn = form.querySelector('button[type="submit"]');
+  btn.disabled = true;
+  status.textContent = 'Sending…';
+  try {
+    const res = await fetch(form.action, {
+      method: 'POST',
+      headers: { 'Accept': 'application/json' },
+      body: new FormData(form)
+    });
+    const data = await res.json();
+    if (res.ok && data.success) {
+      status.textContent = 'Thank you — your message has been sent.';
+      form.reset();
+    } else {
+      status.textContent = 'Something went wrong. Please try again in a moment.';
+    }
+  } catch (err) {
+    status.textContent = 'Could not send. Please check your connection and try again.';
+  }
+  btn.disabled = false;
+});
 
 document.querySelectorAll('.navlinks a').forEach(a => {
   a.addEventListener('click', () => {
