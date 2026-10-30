@@ -1,0 +1,1065 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#211d1b">
+<meta name="description" content="Discover the novels of Johnny Arab — stories of love, memory, longing, and the things we carry with us.">
+<title>Johnny Arab — Author</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,600;1,300&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink: #211d1b;
+  --card-bg: #292422;
+  --card-hover: #322b29;
+  --paper: #eee8df;
+  --cream: #f7f2e9;
+  --muted: #a99b8b;
+  --wine: #713f3d;
+  --line: rgba(238,232,223,.17);
+  --gold: #c9a77c;
+  --gold-glow: rgba(201, 167, 124, 0.25);
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: var(--ink);
+  color: var(--paper);
+  font-family: "DM Sans", sans-serif;
+  font-weight: 300;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+a { color: inherit; text-decoration: none; transition: all 0.25s ease; }
+button { font: inherit; cursor: pointer; border: none; background: none; }
+
+.wrap {
+  width: min(1160px, calc(100% - 48px));
+  margin: auto;
+}
+
+.eyebrow {
+  font-size: 10px;
+  letter-spacing: 0.24em;
+  text-transform: uppercase;
+  color: var(--gold);
+  font-weight: 500;
+  display: inline-block;
+}
+
+/* Header & Nav */
+header {
+  height: 86px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid var(--line);
+  position: sticky;
+  top: 0;
+  background: rgba(33, 29, 27, 0.95);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  z-index: 100;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.brand {
+  font-family: "Cormorant Garamond", serif;
+  font-size: 26px;
+  letter-spacing: 0.12em;
+  font-weight: 600;
+  color: var(--paper);
+}
+
+.navlinks {
+  display: flex;
+  gap: 34px;
+  font-size: 11px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #d1c7bb;
+}
+
+.navlinks a:hover, .textlink:hover {
+  color: var(--gold);
+}
+
+.menu {
+  display: none;
+  background: none;
+  border: 0;
+  color: var(--paper);
+  font-size: 24px;
+}
+
+/* Hero Section */
+.hero {
+  min-height: 690px;
+  display: grid;
+  grid-template-columns: 1.02fr .98fr;
+  align-items: center;
+  gap: 7%;
+  padding: 78px 0 92px;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  width: 420px;
+  height: 420px;
+  border-radius: 50%;
+  background: var(--wine);
+  filter: blur(140px);
+  opacity: .18;
+  right: 6%;
+  top: 18%;
+  pointer-events: none;
+}
+
+.hero-copy {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font: 500 clamp(54px, 7vw, 92px)/.88 "Cormorant Garamond", serif;
+  letter-spacing: -.035em;
+  margin: 25px 0 24px;
+  max-width: 650px;
+}
+
+.hero h1 em {
+  font-weight: 400;
+  color: var(--gold);
+  font-style: italic;
+}
+
+.hero p {
+  font-size: 14px;
+  line-height: 1.9;
+  color: #c8beb2;
+  max-width: 440px;
+}
+
+.actions {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  margin-top: 34px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px 22px;
+  border: 1px solid var(--gold);
+  font-size: 10px;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+  transition: .25s ease;
+  border-radius: 2px;
+}
+
+.btn.primary {
+  background: var(--gold);
+  color: var(--ink);
+  font-weight: 500;
+}
+
+.btn.primary:hover {
+  background: var(--paper);
+  border-color: var(--paper);
+  color: var(--ink);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+}
+
+.btn:not(.primary):hover {
+  background: var(--paper);
+  border-color: var(--paper);
+  color: var(--ink);
+  transform: translateY(-2px);
+}
+
+.textlink {
+  font-size: 11px;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  border-bottom: 1px solid #796c60;
+  padding: 0 0 5px;
+}
+
+.hero-art {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero-art img {
+  width: min(390px, 78%);
+  height: auto;
+  max-height: 570px;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 30px 80px rgba(0,0,0,0.7), 0 0 30px var(--gold-glow);
+  transform: rotate(1.5deg);
+  transition: transform 0.5s ease;
+}
+
+.hero-art img:hover {
+  transform: rotate(0deg) scale(1.02);
+}
+
+.hero-note {
+  position: absolute;
+  right: 0;
+  bottom: 8%;
+  writing-mode: vertical-rl;
+  font: italic 16px "Cormorant Garamond", serif;
+  color: var(--gold);
+  letter-spacing: .08em;
+}
+
+.hero-tagline {
+  font: italic 22px/1.3 "Cormorant Garamond", serif;
+  color: var(--gold);
+  letter-spacing: .06em;
+  margin-top: 20px;
+}
+
+.hero-art img.hero-logo-img {
+  width: min(540px, 94%);
+  max-height: none;
+  border-radius: 0;
+  box-shadow: none;
+  transform: none;
+  filter: drop-shadow(0 0 26px var(--gold-glow));
+}
+
+.hero-art img.hero-logo-img:hover {
+  transform: scale(1.03);
+}
+
+.nav { padding: 0 clamp(8px, 3vw, 36px); }
+
+.rule {
+  border: 0;
+  border-top: 1px solid var(--line);
+  margin: 0;
+}
+
+.section {
+  padding: 105px 0;
+}
+
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+  margin-bottom: 36px;
+}
+
+.section h2 {
+  font: 500 clamp(42px, 5vw, 64px)/.95 "Cormorant Garamond", serif;
+  margin: 13px 0 0;
+}
+
+.section-intro {
+  max-width: 330px;
+  color: #bdb2a6;
+  font-size: 12px;
+  line-height: 1.8;
+}
+
+/* Category Filter Tabs */
+.filter-tabs {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 8px 18px;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  transition: all 0.25s ease;
+}
+
+.tab-btn.active, .tab-btn:hover {
+  color: var(--paper);
+  border-color: var(--gold);
+  background: var(--gold-glow);
+}
+
+/* Books Grid */
+.books {
+  background: #282321;
+}
+
+.book-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px 24px;
+}
+
+.book-card {
+  min-width: 0;
+  background: var(--card-bg);
+  border-radius: 4px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.book-card:hover {
+  transform: translateY(-6px);
+  border-color: var(--gold);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.6);
+  background: var(--card-hover);
+}
+
+.cover-wrap {
+  background: #342e2a;
+  aspect-ratio: 3/4.1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+}
+
+.cover-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .6s ease;
+}
+
+.cover-wrap img.contain { object-fit: contain; }
+
+.book-card:hover .cover-wrap img {
+  transform: scale(1.04);
+}
+
+.book-meta {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.book-meta h3 {
+  font: 500 24px/1.1 "Cormorant Garamond", serif;
+  margin: 0 0 8px;
+  color: var(--paper);
+}
+
+.book-meta p {
+  font-size: 10px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin: 0 0 18px;
+  flex-grow: 1;
+}
+
+.book-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--line);
+  padding-top: 12px;
+  margin-top: auto;
+}
+
+.book-actions button, .book-actions a {
+  font-size: 10px;
+  letter-spacing: .16em;
+  text-transform: uppercase;
+  color: var(--gold);
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 2px;
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.book-actions button:hover, .book-actions a:hover {
+  color: var(--paper);
+  border-color: var(--paper);
+}
+
+/* About Section */
+.about {
+  display: grid;
+  grid-template-columns: .85fr 1.15fr;
+  gap: 8%;
+  align-items: center;
+}
+
+.about-author-photo {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.author-img-wrapper {
+  position: relative;
+  width: min(340px, 100%);
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  padding: 10px;
+  border: 1px solid var(--gold);
+  box-shadow: 0 20px 50px rgba(0,0,0,0.5), 0 0 40px var(--gold-glow);
+  background: radial-gradient(circle at 50% 45%, rgba(201,167,124,0.28) 0%, rgba(113,63,61,0.22) 55%, #292422 100%);
+  overflow: hidden;
+}
+
+.author-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 50%;
+  display: block;
+}
+
+.about-copy h2 {
+  font: 500 clamp(42px, 5vw, 62px)/.95 "Cormorant Garamond", serif;
+  margin: 16px 0 24px;
+}
+
+.about-copy p {
+  max-width: 570px;
+  font-size: 13px;
+  line-height: 2;
+  color: #c8beb2;
+  margin-bottom: 16px;
+}
+
+/* Quote Section */
+.quote {
+  padding: 85px 0;
+  text-align: center;
+  background: #302724;
+}
+
+.quote blockquote {
+  font: italic clamp(28px, 4vw, 46px)/1.15 "Cormorant Garamond", serif;
+  max-width: 850px;
+  margin: 18px auto;
+  color: #eadbc8;
+  padding: 0 20px;
+}
+
+.quote .byline {
+  font-size: 9px;
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+/* Contact Section */
+.contact {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  background: var(--card-bg);
+  padding: 60px;
+  border-radius: 4px;
+  border: 1px solid var(--line);
+}
+
+.contact h2 {
+  font: 500 clamp(42px, 5vw, 62px)/.95 "Cormorant Garamond", serif;
+  margin: 14px 0;
+}
+
+.contact p {
+  color: #bdb2a6;
+  font-size: 12px;
+  line-height: 1.8;
+  max-width: 430px;
+  margin: 0;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: min(420px, 100%);
+  text-align: left;
+}
+.contact-form label {
+  font-size: 10px;
+  letter-spacing: .17em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-top: 8px;
+}
+.contact-form input, .contact-form textarea {
+  font: inherit;
+  font-size: 14px;
+  color: var(--paper);
+  background: var(--ink);
+  border: 1px solid var(--line);
+  border-radius: 2px;
+  padding: 12px 14px;
+  width: 100%;
+}
+.contact-form input:focus, .contact-form textarea:focus {
+  outline: none;
+  border-color: var(--gold);
+}
+.contact-form .btn { margin-top: 14px; }
+.contact-form .textlink { align-self: flex-start; margin-top: 10px; }
+.contact-form .form-status { color: var(--gold); font-size: 13px; max-width: none; }
+.hidden-field { display: none !important; }
+
+/* Footer */
+footer {
+  border-top: 1px solid var(--line);
+  padding: 28px 0;
+  color: #94887d;
+  font-size: 10px;
+  letter-spacing: .1em;
+}
+
+.foot {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  align-items: center;
+}
+
+.social {
+  display: flex;
+  gap: 22px;
+}
+
+.social a:hover {
+  color: var(--gold);
+}
+
+/* Synopsis Modal */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 12, 11, 0.88);
+  backdrop-filter: blur(8px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+
+.modal-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.modal-content {
+  background: var(--card-bg);
+  border: 1px solid var(--gold);
+  border-radius: 4px;
+  max-width: 720px;
+  width: 100%;
+  padding: 36px;
+  position: relative;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+  max-height: 90vh;
+  overflow-y: auto;
+}
+
+.modal-overlay.open .modal-content {
+  transform: translateY(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  color: var(--muted);
+  font-size: 24px;
+  transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+  color: var(--paper);
+}
+
+.modal-body {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 28px;
+  align-items: start;
+}
+
+.modal-body img {
+  width: 100%;
+  height: auto;
+  border-radius: 4px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+}
+
+.modal-body h3 {
+  font: 500 32px/1.05 "Cormorant Garamond", serif;
+  margin: 0 0 6px;
+  color: var(--paper);
+}
+
+.modal-body .modal-tag {
+  color: var(--gold);
+  font-size: 10px;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  display: block;
+}
+
+.modal-body p {
+  font-size: 13px;
+  line-height: 1.85;
+  color: #c8beb2;
+  margin-bottom: 24px;
+}
+
+/* Responsive Styles */
+@media (max-width: 1024px) {
+  .book-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 760px) {
+  .wrap { width: min(100% - 36px, 560px); }
+  header { height: 72px; }
+  .navlinks {
+    display: none;
+    position: absolute;
+    top: 72px;
+    left: 0;
+    right: 0;
+    background: #211d1b;
+    padding: 24px;
+    flex-direction: column;
+    gap: 20px;
+    z-index: 5;
+    border-bottom: 1px solid var(--line);
+  }
+  .navlinks.open { display: flex; }
+  .menu { display: block; }
+  .hero { grid-template-columns: 1fr; gap: 48px; padding: 68px 0 80px; min-height: 0; }
+  .hero h1 { font-size: 64px; }
+  .hero-art img { width: min(300px, 75%); max-height: none; }
+  .hero-note { right: 4%; bottom: 10%; }
+  .section { padding: 76px 0; }
+  .section-head { display: block; }
+  .section-intro { margin-top: 20px; }
+  .book-grid { grid-template-columns: repeat(2, 1fr); gap: 24px 16px; }
+  .about { grid-template-columns: 1fr; gap: 36px; }
+  .contact { flex-direction: column; padding: 40px 28px; text-align: center; }
+  .contact-form { width: 100%; }
+  .foot { flex-direction: column; text-align: center; }
+  .quote { padding: 62px 20px; }
+  .modal-body { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 430px) {
+  .book-grid { grid-template-columns: 1fr; }
+  .hero h1 { font-size: 50px; }
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home">JOHNNY ARAB</a>
+    <nav class="navlinks" id="navlinks">
+      <a href="#books">Books</a>
+      <a href="#about">The Author</a>
+      <a href="#journal">A Note</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button class="menu" aria-label="Open navigation" onclick="document.getElementById('navlinks').classList.toggle('open')">☰</button>
+  </div>
+</header>
+
+<main id="home">
+  <!-- Hero Section -->
+  <section class="wrap hero">
+    <div class="hero-copy">
+      <div class="eyebrow">The official author website</div>
+      <h1>Stories that<br>stay <em>with you.</em></h1>
+      <p>Enter the world of Johnny Arab — where love leaves its mark, memory has a language of its own, and every ending carries the beginning of something else.</p>
+      <div class="hero-tagline">For the stories we never quite leave behind</div>
+      <div class="actions">
+      <a class="btn primary" href="#books">Explore the books</a>
+      <a class="textlink" href="#about">Meet the author</a>
+    </div>
+  </div>
+  <div class="hero-art">
+    <img src="assets/signature-logo.png" 
+         alt="Johnny Arab signature logo" 
+         class="hero-logo-img">
+  </div>
+</section>
+
+<hr class="rule">
+
+  <!-- Bookshelf Section -->
+  <section class="books section" id="books">
+    <div class="wrap">
+      <div class="section-head">
+        <div>
+          <div class="eyebrow">The bookshelf</div>
+          <h2>Books by Johnny Arab</h2>
+        </div>
+        <p class="section-intro">Each book opens a different door. Find the story that feels like it has been waiting for you.</p>
+      </div>
+
+      <!-- Category Filter Tabs -->
+      <div class="filter-tabs">
+        <button class="tab-btn active" onclick="filterBooks('all', this)">All Books</button>
+        <button class="tab-btn" onclick="filterBooks('pole-position', this)">Pole Position Series</button>
+        <button class="tab-btn" onclick="filterBooks('fiction', this)">Standalone Fiction</button>
+      </div>
+
+      <!-- Book Grid -->
+      <div class="book-grid" id="book-grid">
+
+        <!-- Book 1 -->
+        <article class="book-card" data-category="pole-position">
+          <div class="cover-wrap" onclick="openModal(0)">
+            <img src="assets/beyond-the-checkered-flag.jpg" 
+                 alt="Beyond the Checkered Flag cover">
+          </div>
+          <div class="book-meta">
+            <h3>Beyond the<br>Checkered Flag</h3>
+            <p>Motorsport romance</p>
+            <div class="book-actions">
+              <button onclick="openModal(0)">Synopsis</button>
+              <a href="https://www.amazon.com/s?k=Beyond+the+Checkered+Flag+Johnny+Arab&i=digital-text" target="_blank" rel="noopener">Kindle ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Book 2 -->
+        <article class="book-card" data-category="fiction">
+          <div class="cover-wrap" onclick="openModal(1)">
+            <img src="assets/the-wildflowers-we-leave-behind.jpg" 
+                 alt="The Wildflowers We Leave Behind cover">
+          </div>
+          <div class="book-meta">
+            <h3>The Wildflowers<br>We Leave Behind</h3>
+            <p>Fiction</p>
+            <div class="book-actions">
+              <button onclick="openModal(1)">Synopsis</button>
+              <a href="https://www.amazon.com/s?k=The+Wildflowers+We+Leave+Behind+Johnny+Arab&i=digital-text" target="_blank" rel="noopener">Kindle ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Book 3 -->
+        <article class="book-card" data-category="fiction">
+          <div class="cover-wrap" onclick="openModal(2)">
+            <img src="assets/the-ballad-of-almosts-and-neverweres.jpg" 
+                 alt="The Ballad of Almosts and Neverweres cover">
+          </div>
+          <div class="book-meta">
+            <h3>The Ballad of Almosts<br>and Neverweres</h3>
+            <p>Fiction</p>
+            <div class="book-actions">
+              <button onclick="openModal(2)">Synopsis</button>
+              <a href="https://www.amazon.com/s?k=The+Ballad+of+Almosts+and+Neverweres+Johnny+Arab&i=digital-text" target="_blank" rel="noopener">Kindle ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Book 4 -->
+        <article class="book-card" data-category="fiction">
+          <div class="cover-wrap" onclick="openModal(3)">
+            <img src="assets/the-byrons.jpg" 
+                 alt="The Byrons cover">
+          </div>
+          <div class="book-meta">
+            <h3>The Byrons</h3>
+            <p>Fiction</p>
+            <div class="book-actions">
+              <button onclick="openModal(3)">Synopsis</button>
+              <a href="https://www.amazon.com/s?k=The+Byrons+Johnny+Arab&i=digital-text" target="_blank" rel="noopener">Kindle ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Book 5 -->
+        <article class="book-card" data-category="fiction">
+          <div class="cover-wrap" onclick="openModal(4)">
+            <img src="assets/the-alcatraz-of-valcazar.jpg" 
+                 alt="The Alcatraz of Valcázar cover">
+          </div>
+          <div class="book-meta">
+            <h3>The Alcatraz<br>of Valcázar</h3>
+            <p>Fiction</p>
+            <div class="book-actions">
+              <button onclick="openModal(4)">Synopsis</button>
+              <a href="https://www.amazon.com/s?k=The+Alcatraz+of+Valcazar+Johnny+Arab&i=digital-text" target="_blank" rel="noopener">Kindle ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Book 6 -->
+        <article class="book-card" data-category="pole-position">
+          <div class="cover-wrap" onclick="openModal(5)">
+            <img src="assets/the-apex-of-absence.jpg" 
+                 alt="The Apex of Absence cover">
+          </div>
+          <div class="book-meta">
+            <h3>The Apex of<br>Absence</h3>
+            <p>Pole Position Series · Book 4</p>
+            <div class="book-actions">
+              <button onclick="openModal(5)">Synopsis</button>
+              <a href="https://www.amazon.com/s?k=The+Apex+of+Absence+Johnny+Arab&i=digital-text" target="_blank" rel="noopener">Kindle ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Book 7 -->
+        <article class="book-card" data-category="pole-position">
+          <div class="cover-wrap" onclick="openModal(6)">
+            <img src="assets/the-glory-at-the-finish-line.jpg" class="contain" 
+                 alt="The Glory at the Finish Line cover">
+          </div>
+          <div class="book-meta">
+            <h3>The Glory at<br>the Finish Line</h3>
+            <p>Pole Position Series · Book 3</p>
+            <div class="book-actions">
+              <button onclick="openModal(6)">Synopsis</button>
+              <a href="https://www.amazon.com/s?k=The+Glory+at+the+Finish+Line+Johnny+Arab&i=digital-text" target="_blank" rel="noopener">Kindle ↗</a>
+            </div>
+          </div>
+        </article>
+
+        <!-- Book 8 -->
+        <article class="book-card" data-category="pole-position">
+          <div class="cover-wrap" onclick="openModal(7)">
+            <img src="assets/the-second-turn-of-us.jpg" 
+                 alt="The Second Turn of Us cover">
+          </div>
+          <div class="book-meta">
+            <h3>The Second<br>Turn of Us</h3>
+            <p>Pole Position Series · Book 2</p>
+            <div class="book-actions">
+              <button onclick="openModal(7)">Synopsis</button>
+              <a href="https://www.amazon.com/s?k=The+Second+Turn+of+Us+Johnny+Arab&i=digital-text" target="_blank" rel="noopener">Kindle ↗</a>
+            </div>
+          </div>
+        </article>
+      </div></div></section>
+
+<section class="wrap section about" id="about">
+  <div class="about-author-photo">
+    <div class="author-img-wrapper">
+      <img src="assets/author-photo.png" 
+           alt="Johnny Arab" class="author-photo">
+    </div>
+  </div>
+  <div class="about-copy">
+    <div class="eyebrow">Between the lines</div>
+    <h2>A little about<br>the author.</h2>
+    <p>Johnny Arab writes stories about the human things that linger: love, absence, ambition, tenderness, and the complicated spaces between what we say and what we mean. His work moves across worlds and genres, always returning to the quiet details that make a story unforgettable.</p>
+    <p>This is a place to discover his books, follow new releases, and step a little further into the worlds behind the pages.</p>
+  </div>
+</section>
+
+<section class="quote" id="journal">
+  <div class="eyebrow">A note to the reader</div>
+  <blockquote>“There are stories we read, and stories that quietly become part of us.”</blockquote>
+  <div class="byline">Johnny Arab</div>
+</section>
+
+<section class="wrap section contact" id="contact">
+  <div>
+    <div class="eyebrow">Stay in the story</div>
+    <h2>Until the next page.</h2>
+    <p>For reader messages, book-related inquiries, interviews, or collaborations, get in touch.</p>
+  </div>
+  <form class="contact-form" name="contact" method="POST" action="/?sent=1" data-netlify="true" netlify-honeypot="bot-field">
+    <input type="hidden" name="form-name" value="contact">
+    <p class="hidden-field"><label>Don't fill this out: <input name="bot-field"></label></p>
+    <label for="cf-name">Your name</label>
+    <input id="cf-name" type="text" name="name" required autocomplete="name">
+    <label for="cf-email">Your email</label>
+    <input id="cf-email" type="email" name="email" required autocomplete="email">
+    <label for="cf-message">Message</label>
+    <textarea id="cf-message" name="message" rows="5" required></textarea>
+    <button class="btn primary" type="submit">Send message</button>
+    <p class="form-status" id="formStatus" role="status"></p>
+  </form>
+</section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© <span id="year"></span> JOHNNY ARAB. ALL RIGHTS RESERVED.</span>
+    <div class="social">
+      <a href="#books">BOOKS</a>
+      <a href="#about">ABOUT</a>
+      <a href="#home">BACK TO TOP ↑</a>
+    </div>
+  </div>
+</footer>
+
+<!-- Book Synopsis Modal -->
+<div class="modal-overlay" id="bookModal" onclick="if(event.target===this) closeModal()">
+  <div class="modal-content">
+    <button class="modal-close" onclick="closeModal()" aria-label="Close modal">✕</button>
+    <div class="modal-body">
+      <img id="modalCover" src="" alt="Book Cover">
+      <div>
+        <h3 id="modalTitle">Book Title</h3>
+        <span class="modal-tag" id="modalTag">Genre</span>
+        <p id="modalDesc">Synopsis description...</p>
+        <a id="modalBuy" href="#" target="_blank" rel="noopener" class="btn primary">Find on Kindle ↗</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+document.getElementById('year').textContent = new Date().getFullYear();
+if (new URLSearchParams(location.search).get('sent') === '1') {
+  document.getElementById('formStatus').textContent = 'Thank you — your message has been sent.';
+  document.getElementById('contact').scrollIntoView();
+}
+
+document.querySelectorAll('.navlinks a').forEach(a => {
+  a.addEventListener('click', () => {
+    document.getElementById('navlinks').classList.remove('open');
+  });
+});
+
+const bookData = [
+  {
+    title: "Beyond the Checkered Flag",
+    tag: "Motorsport Romance",
+    desc: "In the high-adrenaline world of racing, speed is everything. But when the dust settles beyond the finish line, two lives collide in a pulse-pounding romance where love is the ultimate prize.",
+    cover: "assets/beyond-the-checkered-flag.jpg",
+    link: "https://www.amazon.com/s?k=Beyond+the+Checkered+Flag+Johnny+Arab&i=digital-text"
+  },
+  {
+    title: "The Wildflowers We Leave Behind",
+    tag: "Fiction",
+    desc: "A poignant exploration of memory and longing, telling the story of names we carry and secrets left in the quiet places of our past.",
+    cover: "assets/the-wildflowers-we-leave-behind.jpg",
+    link: "https://www.amazon.com/s?k=The+Wildflowers+We+Leave+Behind+Johnny+Arab&i=digital-text"
+  },
+  {
+    title: "The Ballad of Almosts and Neverweres",
+    tag: "Fiction",
+    desc: "\"He spoke in flowers — every petal a confession, every thorn a warning.\" A haunting narrative woven around unfulfilled promises and the beauty of what could have been.",
+    cover: "assets/the-ballad-of-almosts-and-neverweres.jpg",
+    link: "https://www.amazon.com/s?k=The+Ballad+of+Almosts+and+Neverweres+Johnny+Arab&i=digital-text"
+  },
+  {
+    title: "The Byrons",
+    tag: "Fiction",
+    desc: "An atmospheric saga exploring dynamic family bonds, hidden passions, and the delicate beauty of lavender fields.",
+    cover: "assets/the-byrons.jpg",
+    link: "https://www.amazon.com/s?k=The+Byrons+Johnny+Arab&i=digital-text"
+  },
+  {
+    title: "The Alcatraz of Valcázar",
+    tag: "Fiction",
+    desc: "A dramatic novel of suspense, romance, and destiny as secrets unravel beneath the moonlit sky of Valcázar.",
+    cover: "assets/the-alcatraz-of-valcazar.jpg",
+    link: "https://www.amazon.com/s?k=The+Alcatraz+of+Valcazar+Johnny+Arab&i=digital-text"
+  },
+  {
+    title: "The Apex of Absence",
+    tag: "Pole Position Series · Book 4",
+    desc: "Sometimes, the greatest love is found in what was once lost. The gripping climax to the Pole Position Series.",
+    cover: "assets/the-apex-of-absence.jpg",
+    link: "https://www.amazon.com/s?k=The+Apex+of+Absence+Johnny+Arab&i=digital-text"
+  },
+  {
+    title: "The Glory at the Finish Line",
+    tag: "Pole Position Series · Book 3",
+    desc: "High stakes, hidden motives, and fierce ambition clash in the third installment of the Pole Position Series.",
+    cover: "assets/the-glory-at-the-finish-line.jpg",
+    link: "https://www.amazon.com/s?k=The+Glory+at+the+Finish+Line+Johnny+Arab&i=digital-text"
+  },
+  {
+    title: "The Second Turn of Us",
+    tag: "Pole Position Series · Book 2",
+    desc: "\"Some wounds don't bleed. They bloom.\" The second turn brings second chances in this emotional motorsport story.",
+    cover: "assets/the-second-turn-of-us.jpg",
+    link: "https://www.amazon.com/s?k=The+Second+Turn+of+Us+Johnny+Arab&i=digital-text"
+  }
+];
+
+function openModal(index) {
+  const book = bookData[index];
+  if (!book) return;
+  
+  document.getElementById('modalTitle').textContent = book.title;
+  document.getElementById('modalTag').textContent = book.tag;
+  document.getElementById('modalDesc').textContent = book.desc;
+  document.getElementById('modalCover').src = book.cover;
+  document.getElementById('modalBuy').href = book.link;
+  
+  const modal = document.getElementById('bookModal');
+  modal.classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+  const modal = document.getElementById('bookModal');
+  modal.classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+function filterBooks(category, btnElement) {
+  document.querySelectorAll('.tab-btn').forEach(btn => btn.classList.remove('active'));
+  if (btnElement) btnElement.classList.add('active');
+  
+  const cards = document.querySelectorAll('.book-card');
+  cards.forEach(card => {
+    if (category === 'all' || card.dataset.category === category) {
+      card.style.display = 'flex';
+    } else {
+      card.style.display = 'none';
+    }
+  });
+}
+</script>
+</body>
+</html>
